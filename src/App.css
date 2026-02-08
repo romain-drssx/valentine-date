@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.valentine-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.valentine-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.question {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #333;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 80px;
+  position: relative;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-yes {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-yes:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-yes:active {
+  transform: scale(0.98);
+}
+
+.btn-no {
+  background: #e0e0e0;
+  color: #333;
+  position: relative;
+  transition: all 0.2s ease-out;
+  cursor: not-allowed;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-no:hover {
+  background: #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .valentine-card {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .question {
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.3rem, 4vw, 2rem);
+  }
+
+  .buttons-container {
+    gap: 1rem;
+    min-height: 70px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  #root {
+    padding: 0.75rem;
+  }
+
+  .valentine-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .question {
+    margin-bottom: 1.25rem;
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+
+  .buttons-container {
+    gap: 0.75rem;
+    flex-direction: column;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    min-width: unset;
+    flex: unset;
+  }
+
+  .btn-yes {
+    min-width: unset;
+  }
+
+  .btn-no {
+    min-width: unset;
+  }
+}
+  }
+}
