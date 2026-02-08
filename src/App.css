@@ -114,11 +114,54 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Success page styles */
+.success-card {
+  max-width: 600px;
+  padding: 2.5rem;
+}
+
+.success-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.celebration-gif {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.success-message {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: #555;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
 /* Responsive design for tablets */
 @media (max-width: 768px) {
   .valentine-card {
     padding: 1.5rem;
     border-radius: 15px;
+  }
+
+  .success-card {
+    padding: 1.5rem;
   }
 
   .question {
@@ -135,6 +178,14 @@ body {
     padding: 0.6rem 1.2rem;
     font-size: clamp(0.85rem, 2.5vw, 1rem);
   }
+
+  .success-title {
+    margin-bottom: 1rem;
+  }
+
+  .celebration-gif {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Responsive design for mobile */
@@ -146,6 +197,10 @@ body {
   .valentine-card {
     padding: 1.25rem;
     border-radius: 12px;
+  }
+
+  .success-card {
+    padding: 1rem;
   }
 
   .question {
@@ -174,6 +229,20 @@ body {
 
   .btn-no {
     min-width: unset;
+  }
+
+  .success-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .celebration-gif {
+    max-width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  .success-message {
+    font-size: 0.95rem;
   }
 }
   }
