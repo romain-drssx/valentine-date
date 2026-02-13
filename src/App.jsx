@@ -46,7 +46,7 @@ function App() {
         <div className="valentine-card success-card">
           <h1 className="success-title">Bon choix! 💕</h1>
           <img src={calinGif} alt="Celebration" className="celebration-gif" />
-          <p className="success-message">Tu as rendu la plus heureuse personne du monde! 🥰</p>
+          <p className="success-message">Tu vas être la personnne la plus heureuse ! 🥰</p>
         </div>
       </div>
     )
